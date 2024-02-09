@@ -1,0 +1,96 @@
+﻿
+@model Product
+
+@{
+    Layout = "_DashBoard";
+}
+
+
+
+<div class="dash-content">
+    <div class="overview">
+        <div class="title">
+            <i class="uil uil-tachometer-fast-alt"></i>
+            <span class="text">Adding Product</span>
+        </div>
+
+        <div>
+            <form method="post" asp-action="AddProduct" class="row">
+                <div class="mb-3">
+                    <label asp-for="Name" for="" class="form-label">Product Name</label>
+                    <input type="text"
+                           
+                           asp-for="Name"
+                           class="form-control"
+                           placeholder="" />
+
+                </div>
+
+
+
+
+
+                <div class="mb-3">
+                    <label asp-for="Description" for="" class="form-label">Product Description</label>
+                    <textarea type="text"
+                             
+                              asp-for="Description"
+                              class="form-control"
+                              placeholder=""></textarea>
+                </div>
+
+
+
+                <div class="mb-3 col-lg-6">
+
+                    <label asp-for="Quantity" for="" class="form-label">Product Quantity</label>
+                    <input type="number"
+                          
+                           asp-for="Quantity"
+                           class="form-control"
+                           placeholder=""></input>
+                </div>
+
+
+                <div class="mb-3 col-lg-6">
+                    <label asp-for="Price" for="" class="form-label">Product Price</label>
+                    <input type="number"
+                          
+                           asp-for="Price"
+                           class="form-control"
+                           placeholder=""></input>
+                </div>
+                <div class="mb-3 col-lg-12 d-flex align-items-center mt-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="enablsize"   />
+                       
+                        <label class="form-check-label" asp-for="enablsize" for=""> Enable Product Size </label>
+           
+                    </div>
+
+
+                </div>
+
+                <div class="mb-3 col-lg-6">
+                    <label asp-for="company.Id" for="" class="form-label">company</label>
+                    <select class="form-select "
+                           
+                            asp-for="company.Id"
+                    >
+                        <option selected>Select one</option>
+                        <option value="1">nike</option>
+                        <option value="2">adidas</option>
+                    </select>
+                </div>
+
+              
+
+                <div class="col-lg-12 d-flex justify-content-center  ">
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>

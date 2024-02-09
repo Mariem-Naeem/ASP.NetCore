@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link href="c:\Users\user\Documents\code Template\code Template\ProjectTemplate\Admin Dashboard Panel\style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Shopstyles.css" asp-append-version="true" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">MiniShop</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name"><a asp-action="AddProduct">Add Product</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">View Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name"> <a asp-action="AddBlog">Add Blog</a></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-comments"></i>
+                        <span class="link-name">View Blog</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="images/profile.jpg" alt="">
+        </div>
+    <div class="dash-content">
+        @RenderBody()
+    </div>
+    </section>
+    
+
+    <script src="~/js/DashBoardScripts/script.js"></script>
+</body>
+</html>
